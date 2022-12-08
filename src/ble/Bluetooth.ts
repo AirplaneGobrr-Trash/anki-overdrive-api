@@ -1,7 +1,7 @@
-import {IBluetooth, State} from "./IBluetooth";
+import { IBluetooth, State } from "./IBluetooth";
 import * as noble from "noble";
-import {IDevice} from "./IDevice";
-import {Device} from "./Device";
+import { IDevice } from "./IDevice";
+import { Device } from "./Device";
 
 /**
  * Bluetooth environment using noble.js.
@@ -23,9 +23,9 @@ class Bluetooth implements IBluetooth {
      * @param onError Callback if error occurs
      * @param timeout Time to wait for connected bluetooth adapter
      */
-    public constructor(onDiscover: (device: IDevice) => any = () => {},
-                       onError = () => {},
-                       timeout = 500) {
+    public constructor(onDiscover: (device: IDevice) => any = () => { },
+        onError = () => { },
+        timeout = 500) {
         this._onDiscover = onDiscover
         this._onError = onError
         this._timeout = timeout
@@ -58,7 +58,7 @@ class Bluetooth implements IBluetooth {
         const self = this
 
         return new Promise<void>((resolve, reject) => {
-            if(self._state === "poweredOn") {
+            if (self._state === "poweredOn") {
                 noble.stopScanning()
                 noble.removeListener("discover", this._onDiscover)
                 noble.removeListener("error", this._onError)
@@ -120,4 +120,4 @@ class Bluetooth implements IBluetooth {
     }
 }
 
-export {Bluetooth}
+export { Bluetooth }

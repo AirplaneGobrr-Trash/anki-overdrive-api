@@ -7,4 +7,4 @@ interface IVehicleMessage {
     toJsonString(): string
 }
 
-export {IVehicleMessage}
+export { IVehicleMessage }

@@ -1,9 +1,9 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage";
-import {ANKI_VEHICLE_MSG_C2V_SET_OFFSET_FROM_ROAD_CENTER} from "../Protocol";
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage";
+import { ANKI_VEHICLE_MSG_C2V_SET_OFFSET_FROM_ROAD_CENTER } from "../Protocol";
 
 const ANKI_VEHICLE_MSG_C2V_SET_OFFSET_FROM_ROAD_CENTER_SIZE = 5
 
-class SetOffsetFromRoadCenter extends  AbstractVehicleMessage {
+class SetOffsetFromRoadCenter extends AbstractVehicleMessage {
 
     public readonly offsetMm: number
 
@@ -18,4 +18,4 @@ class SetOffsetFromRoadCenter extends  AbstractVehicleMessage {
 
 }
 
-export {SetOffsetFromRoadCenter}
+export { SetOffsetFromRoadCenter }

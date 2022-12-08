@@ -1,4 +1,4 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
 
 class VersionResponse extends AbstractVehicleMessage {
 
@@ -12,4 +12,4 @@ class VersionResponse extends AbstractVehicleMessage {
 
 }
 
-export {VersionResponse}
+export { VersionResponse }

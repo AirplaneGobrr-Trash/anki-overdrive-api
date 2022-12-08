@@ -1,4 +1,4 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
 
 class OffsetFromRoadCenterUpdate extends AbstractVehicleMessage {
 
@@ -14,4 +14,4 @@ class OffsetFromRoadCenterUpdate extends AbstractVehicleMessage {
 
 }
 
-export {OffsetFromRoadCenterUpdate}
+export { OffsetFromRoadCenterUpdate }

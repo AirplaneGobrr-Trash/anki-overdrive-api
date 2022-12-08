@@ -1,5 +1,5 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
-import {ANKI_VEHICLE_MSG_BASE_SIZE, ANKI_VEHICLE_MSG_C2V_BATTERY_LEVEL_REQUEST} from "../Protocol"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
+import { ANKI_VEHICLE_MSG_BASE_SIZE, ANKI_VEHICLE_MSG_C2V_BATTERY_LEVEL_REQUEST } from "../Protocol"
 
 class BatteryLevelRequest extends AbstractVehicleMessage {
 
@@ -12,4 +12,4 @@ class BatteryLevelRequest extends AbstractVehicleMessage {
 
 }
 
-export {BatteryLevelRequest}
+export { BatteryLevelRequest }

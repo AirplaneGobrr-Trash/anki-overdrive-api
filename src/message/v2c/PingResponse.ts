@@ -1,5 +1,5 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
-import {PingRequest} from "../c2v/PingRequest"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
+import { PingRequest } from "../c2v/PingRequest"
 
 class PingResponse extends AbstractVehicleMessage {
 
@@ -14,4 +14,4 @@ class PingResponse extends AbstractVehicleMessage {
 
 }
 
-export {PingResponse}
+export { PingResponse }

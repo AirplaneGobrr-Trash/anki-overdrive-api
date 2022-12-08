@@ -53,4 +53,4 @@ interface IDevice {
 
 }
 
-export {IDevice}
+export { IDevice }

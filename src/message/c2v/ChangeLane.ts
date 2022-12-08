@@ -1,5 +1,5 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage";
-import {ANKI_VEHICLE_MSG_C2V_CHANGE_LANE} from "../Protocol";
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage";
+import { ANKI_VEHICLE_MSG_C2V_CHANGE_LANE } from "../Protocol";
 
 const ANKI_VEHICLE_MSG_C2V_CHANGE_LANE_SIZE = 11
 
@@ -12,11 +12,11 @@ class ChangeLane extends AbstractVehicleMessage {
     public readonly tag: number
 
     public constructor(vehicleId: string,
-                       offsetFromRoadCenterMm: number,
-                       horizontalSpeedMmPerSec = 300,
-                       horizontalAccelMmPerSec2 = 300,
-                       hopIntent = 0x0,
-                       tag = 0x0) {
+        offsetFromRoadCenterMm: number,
+        horizontalSpeedMmPerSec = 300,
+        horizontalAccelMmPerSec2 = 300,
+        hopIntent = 0x0,
+        tag = 0x0) {
         super(vehicleId, Buffer.alloc(ANKI_VEHICLE_MSG_C2V_CHANGE_LANE_SIZE + 1))
 
         this.payload.writeUInt8(ANKI_VEHICLE_MSG_C2V_CHANGE_LANE_SIZE, 0)
@@ -35,4 +35,4 @@ class ChangeLane extends AbstractVehicleMessage {
 
 }
 
-export {ChangeLane}
+export { ChangeLane }

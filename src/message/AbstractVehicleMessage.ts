@@ -1,4 +1,4 @@
-import {IVehicleMessage} from "./IVehicleMessage"
+import { IVehicleMessage } from "./IVehicleMessage"
 
 abstract class AbstractVehicleMessage implements IVehicleMessage {
 
@@ -22,4 +22,4 @@ abstract class AbstractVehicleMessage implements IVehicleMessage {
     }
 }
 
-export {AbstractVehicleMessage}
+export { AbstractVehicleMessage }

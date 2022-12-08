@@ -1,6 +1,6 @@
-import {IDevice} from "./IDevice";
+import { IDevice } from "./IDevice";
 
-type State = ("poweredOn"|"disconnected"|"error"|"unknown")
+type State = ("poweredOn" | "disconnected" | "error" | "unknown")
 
 /**
  * Represents the bluetooth of the current environment
@@ -54,4 +54,4 @@ interface IBluetooth {
     stopScanning(): Promise<void>
 }
 
-export {State, IBluetooth}
+export { State, IBluetooth }

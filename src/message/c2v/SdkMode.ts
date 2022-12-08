@@ -1,5 +1,5 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
-import {ANKI_VEHICLE_MSG_C2V_SDK_MODE, ANKI_VEHICLE_SDK_OPTION_OVERRIDE_LOCALIZATION} from "../Protocol"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
+import { ANKI_VEHICLE_MSG_C2V_SDK_MODE, ANKI_VEHICLE_SDK_OPTION_OVERRIDE_LOCALIZATION } from "../Protocol"
 
 const ANKI_VEHICLE_MSG_SDK_MODE_SIZE = 3
 
@@ -21,4 +21,4 @@ class SdkMode extends AbstractVehicleMessage {
 
 }
 
-export {SdkMode}
+export { SdkMode }

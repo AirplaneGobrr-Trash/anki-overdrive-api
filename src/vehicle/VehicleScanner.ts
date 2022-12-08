@@ -1,9 +1,9 @@
-import {IVehicleScanner} from "./IVehicleScanner";
-import {IBluetooth} from "../ble/IBluetooth";
-import {IDevice} from "../ble/IDevice";
-import {IVehicle} from "./IVehicle";
-import {Vehicle} from "./Vehicle";
-import {ANKI_STR_SERVICE_UUID} from "../message/GattProfile";
+import { IVehicleScanner } from "./IVehicleScanner";
+import { IBluetooth } from "../ble/IBluetooth";
+import { IDevice } from "../ble/IDevice";
+import { IVehicle } from "./IVehicle";
+import { Vehicle } from "./Vehicle";
+import { ANKI_STR_SERVICE_UUID } from "../message/GattProfile";
 
 class VehicleScanner implements IVehicleScanner {
 
@@ -79,7 +79,7 @@ class VehicleScanner implements IVehicleScanner {
     }
 
     private onDiscover(device: IDevice): void {
-        if(!this.containsVehicle(device.id)) {
+        if (!this.containsVehicle(device.id)) {
             this._vehicles.push(
                 new Vehicle(device)
             )
@@ -97,7 +97,8 @@ class VehicleScanner implements IVehicleScanner {
             setTimeout(() => {
                 self._bluetooth.stopScanning()
                     .then(() => {
-                        resolve(self._vehicles)})
+                        resolve(self._vehicles)
+                    })
                     .catch(reject)
             }, self._timeout)
         })
@@ -105,4 +106,4 @@ class VehicleScanner implements IVehicleScanner {
 
 }
 
-export {VehicleScanner}
+export { VehicleScanner }

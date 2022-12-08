@@ -1,7 +1,7 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
-import {ANKI_VEHICLE_MSG_C2V_TURN} from "../Protocol"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
+import { ANKI_VEHICLE_MSG_C2V_TURN } from "../Protocol"
 
-const ANKI_VEHICLE_MSG_C2V_TURN_SIZE   = 3
+const ANKI_VEHICLE_MSG_C2V_TURN_SIZE = 3
 
 enum TurnTrigger {
     VEHICLE_TURN_TRIGGER_IMMEDIATE = 0,
@@ -34,4 +34,4 @@ class Turn extends AbstractVehicleMessage {
 
 }
 
-export {TurnType, TurnTrigger, Turn}
+export { TurnType, TurnTrigger, Turn }

@@ -1,4 +1,4 @@
-import {IVehicle} from "./IVehicle";
+import { IVehicle } from "./IVehicle";
 
 interface IVehicleScanner {
 
@@ -16,4 +16,4 @@ interface IVehicleScanner {
 
 }
 
-export {IVehicleScanner}
+export { IVehicleScanner }

@@ -1,4 +1,4 @@
-import {IVehicleMessage} from "../message/IVehicleMessage";
+import { IVehicleMessage } from "../message/IVehicleMessage";
 
 interface IVehicle {
 
@@ -43,4 +43,4 @@ interface IVehicle {
     removeListener<T extends IVehicleMessage>(listener: (message: T) => any): void
 }
 
-export {IVehicle}
+export { IVehicle }

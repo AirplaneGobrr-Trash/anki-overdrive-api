@@ -1,4 +1,4 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
 
 class LocalizationTransitionUpdate extends AbstractVehicleMessage {
 
@@ -34,4 +34,4 @@ class LocalizationTransitionUpdate extends AbstractVehicleMessage {
 
 }
 
-export {LocalizationTransitionUpdate}
+export { LocalizationTransitionUpdate }

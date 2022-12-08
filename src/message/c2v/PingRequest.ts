@@ -1,5 +1,5 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
-import {ANKI_VEHICLE_MSG_BASE_SIZE, ANKI_VEHICLE_MSG_C2V_PING_REQUEST,} from "../Protocol"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
+import { ANKI_VEHICLE_MSG_BASE_SIZE, ANKI_VEHICLE_MSG_C2V_PING_REQUEST, } from "../Protocol"
 
 class PingRequest extends AbstractVehicleMessage {
 
@@ -12,4 +12,4 @@ class PingRequest extends AbstractVehicleMessage {
 
 }
 
-export {PingRequest}
+export { PingRequest }

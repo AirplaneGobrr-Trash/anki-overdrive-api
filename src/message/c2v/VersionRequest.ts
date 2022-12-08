@@ -1,5 +1,5 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
-import {ANKI_VEHICLE_MSG_BASE_SIZE, ANKI_VEHICLE_MSG_C2V_VERSION_REQUEST} from "../Protocol"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
+import { ANKI_VEHICLE_MSG_BASE_SIZE, ANKI_VEHICLE_MSG_C2V_VERSION_REQUEST } from "../Protocol"
 
 class VersionRequest extends AbstractVehicleMessage {
 
@@ -12,4 +12,4 @@ class VersionRequest extends AbstractVehicleMessage {
 
 }
 
-export {VersionRequest}
+export { VersionRequest }

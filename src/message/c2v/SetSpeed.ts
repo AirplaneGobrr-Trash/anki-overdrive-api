@@ -1,7 +1,7 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
-import {ANKI_VEHICLE_MSG_C2V_SET_SPEED} from "../Protocol"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
+import { ANKI_VEHICLE_MSG_C2V_SET_SPEED } from "../Protocol"
 
-const ANKI_VEHICLE_MSG_C2V_SET_SPEED_SIZE   = 6
+const ANKI_VEHICLE_MSG_C2V_SET_SPEED_SIZE = 6
 
 class SetSpeed extends AbstractVehicleMessage {
 
@@ -10,9 +10,9 @@ class SetSpeed extends AbstractVehicleMessage {
     public readonly respectRoadPieceSpeedLimit: boolean
 
     public constructor(vehicleId: string,
-                       speedMmPerSec: number,
-                       accelMmPerSec2 = 500,
-                       respectRoadPieceSpeedLimit = false) {
+        speedMmPerSec: number,
+        accelMmPerSec2 = 500,
+        respectRoadPieceSpeedLimit = false) {
         super(vehicleId, Buffer.alloc(ANKI_VEHICLE_MSG_C2V_SET_SPEED_SIZE + 1))
 
         this.payload.writeUInt8(ANKI_VEHICLE_MSG_C2V_SET_SPEED_SIZE, 0)
@@ -27,4 +27,4 @@ class SetSpeed extends AbstractVehicleMessage {
 
 }
 
-export {SetSpeed}
+export { SetSpeed }

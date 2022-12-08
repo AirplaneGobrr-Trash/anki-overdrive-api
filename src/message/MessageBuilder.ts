@@ -1,6 +1,6 @@
-import {BatteryLevelResponse} from "./v2c/BatteryLevelResponse";
-import {PingResponse} from "./v2c/PingResponse";
-import {LocalizationTransitionUpdate} from "./v2c/LocalizationTransitionUpdate";
+import { BatteryLevelResponse } from "./v2c/BatteryLevelResponse";
+import { PingResponse } from "./v2c/PingResponse";
+import { LocalizationTransitionUpdate } from "./v2c/LocalizationTransitionUpdate";
 import {
     ANKI_VEHICLE_MSG_V2C_BATTERY_LEVEL_RESPONSE,
     ANKI_VEHICLE_MSG_V2C_LOCALIZATION_INTERSECTION_UPDATE,
@@ -10,11 +10,11 @@ import {
     ANKI_VEHICLE_MSG_V2C_VEHICLE_DELOCALIZED,
     ANKI_VEHICLE_MSG_V2C_VERSION_RESPONSE
 } from "./Protocol";
-import {LocalizationIntersectionUpdate} from "./v2c/LocalizationIntersectionUpdate";
-import {LocalizationPositionUpdate} from "./v2c/LocalizationPositionUpdate";
-import {VersionResponse} from "./v2c/VersionResponse";
-import {VehicleDelocalizedUpdate} from "./v2c/VehicleDelocalizedUpdate";
-import {IVehicleMessage} from "./IVehicleMessage";
+import { LocalizationIntersectionUpdate } from "./v2c/LocalizationIntersectionUpdate";
+import { LocalizationPositionUpdate } from "./v2c/LocalizationPositionUpdate";
+import { VersionResponse } from "./v2c/VersionResponse";
+import { VehicleDelocalizedUpdate } from "./v2c/VehicleDelocalizedUpdate";
+import { IVehicleMessage } from "./IVehicleMessage";
 
 class MessageBuilder {
 
@@ -37,7 +37,7 @@ class MessageBuilder {
         return this
     }
 
-    public build(): IVehicleMessage | undefined  {
+    public build(): IVehicleMessage | undefined {
         switch (this._messageId) {
             case ANKI_VEHICLE_MSG_V2C_BATTERY_LEVEL_RESPONSE:
                 return new BatteryLevelResponse(this._vehicleId, this._payload)
@@ -58,4 +58,4 @@ class MessageBuilder {
 
 }
 
-export {MessageBuilder}
+export { MessageBuilder }

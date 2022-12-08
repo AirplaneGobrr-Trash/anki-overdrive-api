@@ -1,4 +1,4 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
 
 class BatteryLevelResponse extends AbstractVehicleMessage {
 
@@ -12,4 +12,4 @@ class BatteryLevelResponse extends AbstractVehicleMessage {
 
 }
 
-export {BatteryLevelResponse}
+export { BatteryLevelResponse }

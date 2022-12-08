@@ -1,5 +1,5 @@
-import {IDevice} from "./IDevice";
-import {Characteristic, Peripheral} from "noble";
+import { IDevice } from "./IDevice";
+import { Characteristic, Peripheral } from "noble";
 
 class Device implements IDevice {
 
@@ -24,7 +24,7 @@ class Device implements IDevice {
 
         return new Promise<IDevice>((resolve, reject) => {
             self._peripheral.connect(error => {
-                if(error) {
+                if (error) {
                     reject(error)
                 } else {
                     self.initCharacteristics(read, write)
@@ -62,7 +62,7 @@ class Device implements IDevice {
 
         return new Promise<void>((resolve, reject) => {
             self._write.write(data, false, error => {
-                if(error) {
+                if (error) {
                     reject(error)
                 } else {
                     resolve()
@@ -80,16 +80,16 @@ class Device implements IDevice {
                     reject(error);
                 } else {
                     characteristics.forEach(characteristic => {
-                        if(read && characteristic.uuid === read) {
+                        if (read && characteristic.uuid === read) {
                             self._read = characteristic
-                        } else if(write && characteristic.uuid === write) {
+                        } else if (write && characteristic.uuid === write) {
                             self._write = characteristic
                         }
                     })
 
-                    if(read && !self._read) {
+                    if (read && !self._read) {
                         reject("Could not initialize read characteristic.")
-                    } else if(write && !self._write) {
+                    } else if (write && !self._write) {
                         reject("Could not initialize write characteristic.")
                     } else {
                         resolve();
@@ -125,4 +125,4 @@ class Device implements IDevice {
 
 }
 
-export {Device}
+export { Device }

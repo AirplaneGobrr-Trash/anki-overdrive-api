@@ -1,24 +1,24 @@
-import {IVehicle} from "./IVehicle";
-import {IDevice} from "../ble/IDevice";
-import {ANKI_CHR_WRITE_UUID, ANKI_STR_CHR_READ_UUID} from "../message/GattProfile";
-import {CancelLaneChange} from "../message/c2v/CancelLaneChange";
-import {IVehicleMessage} from "../message/IVehicleMessage";
-import {ChangeLane} from "../message/c2v/ChangeLane";
-import {SdkMode} from "../message/c2v/SdkMode";
-import {BatteryLevelRequest} from "../message/c2v/BatteryLevelRequest";
+import { IVehicle } from "./IVehicle";
+import { IDevice } from "../ble/IDevice";
+import { ANKI_CHR_WRITE_UUID, ANKI_STR_CHR_READ_UUID } from "../message/GattProfile";
+import { CancelLaneChange } from "../message/c2v/CancelLaneChange";
+import { IVehicleMessage } from "../message/IVehicleMessage";
+import { ChangeLane } from "../message/c2v/ChangeLane";
+import { SdkMode } from "../message/c2v/SdkMode";
+import { BatteryLevelRequest } from "../message/c2v/BatteryLevelRequest";
 import {
     ANKI_VEHICLE_MSG_V2C_BATTERY_LEVEL_RESPONSE, ANKI_VEHICLE_MSG_V2C_PING_RESPONSE,
     ANKI_VEHICLE_MSG_V2C_VERSION_RESPONSE
 } from "../message/Protocol";
-import {BatteryLevelResponse} from "../message/v2c/BatteryLevelResponse";
-import {MessageBuilder} from "../message/MessageBuilder";
-import {PingRequest} from "../message/c2v/PingRequest";
-import {PingResponse} from "../message/v2c/PingResponse";
-import {VersionRequest} from "../message/c2v/VersionRequest";
-import {VersionResponse} from "../message/v2c/VersionResponse";
-import {SetOffsetFromRoadCenter} from "../message/c2v/SetOffsetFromRoadCenter";
-import {SetSpeed} from "../message/c2v/SetSpeed";
-import {Turn, TurnType} from "../message/c2v/Turn";
+import { BatteryLevelResponse } from "../message/v2c/BatteryLevelResponse";
+import { MessageBuilder } from "../message/MessageBuilder";
+import { PingRequest } from "../message/c2v/PingRequest";
+import { PingResponse } from "../message/v2c/PingResponse";
+import { VersionRequest } from "../message/c2v/VersionRequest";
+import { VersionResponse } from "../message/v2c/VersionResponse";
+import { SetOffsetFromRoadCenter } from "../message/c2v/SetOffsetFromRoadCenter";
+import { SetSpeed } from "../message/c2v/SetSpeed";
+import { Turn, TurnType } from "../message/c2v/Turn";
 
 class Vehicle implements IVehicle {
 
@@ -64,7 +64,7 @@ class Vehicle implements IVehicle {
             self._device.connect(
                 ANKI_STR_CHR_READ_UUID,
                 ANKI_CHR_WRITE_UUID
-            ).then(() =>  {
+            ).then(() => {
                 self.enableSdkMode()
                 self._device.read((data) => self.readAndPublish(data))
                 self._connected = true
@@ -103,7 +103,7 @@ class Vehicle implements IVehicle {
                 new BatteryLevelRequest(this.id),
                 ANKI_VEHICLE_MSG_V2C_BATTERY_LEVEL_RESPONSE
             ).then((message: BatteryLevelResponse) => resolve(message.batteryLevel))
-             .catch(reject)
+                .catch(reject)
         });
     }
 
@@ -117,7 +117,7 @@ class Vehicle implements IVehicle {
                 request,
                 ANKI_VEHICLE_MSG_V2C_PING_RESPONSE
             ).then((message: PingResponse) => resolve(message.calculatePing(request)))
-             .catch(reject)
+                .catch(reject)
         });
     }
 
@@ -129,7 +129,7 @@ class Vehicle implements IVehicle {
                 new VersionRequest(this.id),
                 ANKI_VEHICLE_MSG_V2C_VERSION_RESPONSE
             ).then((message: VersionResponse) => resolve(message.version))
-             .catch(reject)
+                .catch(reject)
         });
     }
 
@@ -225,7 +225,7 @@ class Vehicle implements IVehicle {
 
         return new Promise<Res>((resolve, reject) => {
             const listener = (message: Res) => {
-                if(message && message.payload.readUInt8(1) === responseId) {
+                if (message && message.payload.readUInt8(1) === responseId) {
                     clearTimeout(timeout)
                     self.removeListener(listener)
                     resolve(message)
@@ -242,4 +242,4 @@ class Vehicle implements IVehicle {
 
 }
 
-export {Vehicle}
+export { Vehicle }

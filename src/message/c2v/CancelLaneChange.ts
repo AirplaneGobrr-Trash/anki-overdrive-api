@@ -1,5 +1,5 @@
-import {AbstractVehicleMessage} from "../AbstractVehicleMessage"
-import {ANKI_VEHICLE_MSG_BASE_SIZE, ANKI_VEHICLE_MSG_C2V_CANCEL_LANE_CHANGE} from "../Protocol"
+import { AbstractVehicleMessage } from "../AbstractVehicleMessage"
+import { ANKI_VEHICLE_MSG_BASE_SIZE, ANKI_VEHICLE_MSG_C2V_CANCEL_LANE_CHANGE } from "../Protocol"
 
 class CancelLaneChange extends AbstractVehicleMessage {
 
@@ -12,4 +12,4 @@ class CancelLaneChange extends AbstractVehicleMessage {
 
 }
 
-export {CancelLaneChange}
+export { CancelLaneChange }
